@@ -9,6 +9,7 @@ export interface Property {
   pincode: string;
   phone: string;
   email: string;
+  whatsappNumber: string;
   rating: number;
   totalRooms: number;
   priceRange: string;
@@ -79,6 +80,7 @@ export const properties: Property[] = [
     pincode: '800013',
     phone: '+91 9709633313',
     email: 'info@saalthotels.com',
+    whatsappNumber: '+917280056909',
     rating: 4.9,
     totalRooms: 45,
     priceRange: '₹2,999 - ₹3,999',
@@ -219,6 +221,7 @@ export const properties: Property[] = [
     pincode: '824231',
     phone: '+91 7909046993',
     email: 'info@saalthotels.com',
+    whatsappNumber: '+919709633313',
     rating: 4.9,
     totalRooms: 35,
     priceRange: '₹1,500 - ₹2,500',
@@ -356,6 +359,7 @@ export const properties: Property[] = [
     pincode: '814142',
     phone: '+91 7909046993',
     email: 'info@saalthotels.com',
+    whatsappNumber: '+919709633313',
     rating: 5.0,
     totalRooms: 45,
     priceRange: '₹1,800 - ₹2,500',
@@ -496,6 +500,7 @@ export const properties: Property[] = [
     pincode: '823001',
     phone: '+91 7909046993',
     email: 'info@saalthotels.com',
+    whatsappNumber: '+917909046993',
     rating: 5.0,
     totalRooms: 59,
     priceRange: '₹4,000 - ₹4,500+',

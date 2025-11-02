@@ -305,8 +305,11 @@ export const PatliputraSaaltPage: React.FC = () => {
                           <p className="text-3xl font-bold text-[#1a472a]">{room.price}</p>
                           <p className="text-sm text-gray-600">per night</p>
                         </div>
-                        <Button variant="primary" size="md" onClick={() => window.open(`https://wa.me/919709633313?text=I want to book ${room.name} at Patliputra Saalt`, '_blank')}>
-                          Book Room
+                        <Button variant="primary" size="md" onClick={() => {
+                          const message = `Hello Saalt Hotels, I want to book the ${room.name} room in ${property.name}. How can I proceed?`;
+                          window.open(`https://wa.me/${property.whatsappNumber}?text=${encodeURIComponent(message)}`, '_blank');
+                        }}>
+                          Book This Room
                         </Button>
                       </div>
                     </div>

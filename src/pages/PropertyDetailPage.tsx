@@ -208,12 +208,11 @@ Message: ${formData.message || 'N/A'}`;
                           variant="primary"
                           size="sm"
                           onClick={() => {
-                            setSelectedRoom(index);
-                            setFormData({ ...formData, roomType: room.name });
-                            document.getElementById('booking-form')?.scrollIntoView({ behavior: 'smooth' });
+                            const message = `Hello Saalt Hotels, I want to book the ${room.name} room in ${property.name}. How can I proceed?`;
+                            window.open(`https://wa.me/${property.whatsappNumber}?text=${encodeURIComponent(message)}`, '_blank');
                           }}
                         >
-                          Select This Room
+                          Book This Room
                         </Button>
                       </div>
                     </div>
