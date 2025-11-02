@@ -430,7 +430,7 @@ export const properties: Property[] = [
         cuisine: 'North Indian, South Indian, Local Specialties',
         timing: 'Breakfast 7:00 AM - 10:30 AM, Lunch 12:00 PM - 3:00 PM, Dinner 7:00 PM - 10:30 PM',
         description: 'Savor authentic Indian flavors at our on-site restaurant featuring traditional North Indian curries, South Indian delicacies, and local Jharkhandi specialties. Our chefs prepare sattvic meals suitable for pilgrims.',
-        image: 'https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=800',
+        image: '/saalt-deoghar-restaurent.jpg',
       },
     ],
     nearbyAttractions: [
