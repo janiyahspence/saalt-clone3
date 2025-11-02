@@ -100,6 +100,38 @@ export const AboutPage: React.FC = () => {
 
       <section className="py-20 bg-gradient-to-br from-[#f5f5f0] to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="order-2 lg:order-1">
+              <img
+                src="/avinasha-saalt2.jpg"
+                alt="Abhishek Kumar - Founder of Saalt Hotels"
+                className="rounded-2xl shadow-2xl w-full"
+              />
+            </div>
+            <div className="order-1 lg:order-2">
+              <h2 className="text-4xl font-bold text-[#1a472a] mb-6">Meet Our Founder, Abhishek Kumar</h2>
+              <p className="text-lg text-[#2c3e50] leading-relaxed mb-6">
+                The vision for Saalt Hotel Group is built on a foundation of world-class expertise and a deep love for
+                the culture of Bihar and Jharkhand. Our founder, <span className="font-semibold text-[#1a472a]">Abhishek Kumar</span>, is a native of Bihar who honed his
+                craft for over a decade in executive leadership.
+              </p>
+              <p className="text-lg text-[#2c3e50] leading-relaxed mb-6">
+                After serving as a General Manager for globally renowned brands like <span className="font-semibold">The Lalit</span> and{' '}
+                <span className="font-semibold">Radisson Hotel Group</span>, Abhishek returned to his roots with a singular mission: to bring a new
+                standard of hospitality to the region.
+              </p>
+              <p className="text-lg text-[#2c3e50] leading-relaxed mb-6">
+                He believes in <span className="italic">"operational excellence"</span> and a <span className="italic">"commitment to service quality"</span> that ensures every
+                guest feels a sense of true welcome. This vision guides the Saalt team every day, as we strive to blend
+                modern luxury with the timeless warmth of our home.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-[#1a472a] mb-4">Our Journey</h2>
             <div className="w-24 h-1 bg-gradient-to-r from-[#d4a574] to-[#c89356] mx-auto mb-6"></div>
