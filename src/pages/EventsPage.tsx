@@ -95,6 +95,16 @@ Additional Details: ${formData.message}`;
                       </li>
                     ))}
                   </ul>
+                  <Button
+                    variant="primary"
+                    size="md"
+                    onClick={() => {
+                      const message = `Hi, I would like to enquire about ${event.title} services at Saalt Hotels. Please provide more information.`;
+                      window.open(`https://wa.me/919709633313?text=${encodeURIComponent(message)}`, '_blank');
+                    }}
+                  >
+                    Enquire Now
+                  </Button>
                 </div>
                 <div className={`${index % 2 === 1 ? 'md:order-1' : ''}`}>
                   <img

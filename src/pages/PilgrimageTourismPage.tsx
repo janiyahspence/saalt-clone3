@@ -217,12 +217,23 @@ Special Requirements: ${formData.requirements}`;
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((service, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
+              <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow flex flex-col">
                 <div className="bg-gradient-to-br from-[#1a472a] to-[#2d6e4b] p-3 rounded-full w-12 h-12 flex items-center justify-center mb-4">
                   <service.icon className="text-white" size={24} />
                 </div>
                 <h3 className="text-lg font-bold text-[#1a472a] mb-2">{service.title}</h3>
-                <p className="text-[#2c3e50] text-sm leading-relaxed">{service.description}</p>
+                <p className="text-[#2c3e50] text-sm leading-relaxed mb-4 flex-1">{service.description}</p>
+                <Button
+                  variant="primary"
+                  size="sm"
+                  onClick={() => {
+                    const message = `Hi, I would like to enquire about ${service.title} for pilgrimage tourism. Please provide more details.`;
+                    window.open(`https://wa.me/919709633313?text=${encodeURIComponent(message)}`, '_blank');
+                  }}
+                  className="w-full"
+                >
+                  Enquire Now
+                </Button>
               </div>
             ))}
           </div>
@@ -263,8 +274,16 @@ Special Requirements: ${formData.requirements}`;
                   <p className="text-2xl font-bold text-[#1a472a]">{pkg.starting}</p>
                   <p className="text-sm text-[#2c3e50]">*Prices subject to availability</p>
                 </div>
-                <Button variant="primary" size="md" className="w-full">
-                  Book Package
+                <Button
+                  variant="primary"
+                  size="md"
+                  className="w-full"
+                  onClick={() => {
+                    const message = `Hi, I would like to enquire about the ${pkg.name} package (${pkg.duration}). Please provide more details.`;
+                    window.open(`https://wa.me/919709633313?text=${encodeURIComponent(message)}`, '_blank');
+                  }}
+                >
+                  Enquire Now
                 </Button>
               </div>
             ))}
