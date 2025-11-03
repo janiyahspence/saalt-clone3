@@ -594,13 +594,13 @@ export const properties: Property[] = [
         name: 'Mahabodhi Temple',
         distance: '9-11 km (9 min drive)',
         description: 'UNESCO World Heritage Site and the most sacred place in Buddhism where Buddha attained enlightenment.',
-        image: 'https://images.unsplash.com/photo-1548013146-72479768bada?w=600',
+        image: '/Mahabodhi Temple.jpeg',
       },
       {
         name: 'Wat Thai Buddhagaya',
         distance: '8.6 km',
         description: 'Stunning Thai Buddhist temple featuring traditional architecture and peaceful meditation areas.',
-        image: 'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=600',
+        image: '/Wat Thai Buddhagaya.jpg',
       },
       {
         name: 'Tergar Monastery',
