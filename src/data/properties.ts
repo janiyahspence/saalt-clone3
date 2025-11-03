@@ -100,9 +100,6 @@ export const properties: Property[] = [
     heroImage: '/saalt-patliputra-properties.jpg',
     images: [
       '/saalt-patliputra-properties.jpg',
-      'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1200',
-      'https://images.unsplash.com/photo-1519167758481-83f29da8c459?w=1200',
-      'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=1200',
     ],
     rooms: [
       {
