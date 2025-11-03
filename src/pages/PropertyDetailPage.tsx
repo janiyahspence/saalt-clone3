@@ -4,7 +4,6 @@ import { properties } from '../data/properties';
 import { VideoHero } from '../components/VideoHero';
 import { TestimonialCard } from '../components/TestimonialCard';
 import { PropertyGallery } from '../components/PropertyGallery';
-import { LocationMap } from '../components/LocationMap';
 import { Button } from '../components/Button';
 import {
   MapPin,
@@ -296,15 +295,6 @@ Message: ${formData.message || 'N/A'}`;
 
               <h3 className="text-2xl font-bold text-[#1a472a] mb-6">Photo Gallery</h3>
               <PropertyGallery property={property} />
-
-              <h3 className="text-2xl font-bold text-[#1a472a] mb-6 mt-12">Location & Directions</h3>
-              <LocationMap
-                address={property.address}
-                city={property.city}
-                state={property.state}
-                pincode={property.pincode}
-                embedUrl={property.mapEmbedUrl}
-              />
             </div>
 
             <div className="lg:col-span-1">
