@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { properties } from '../data/properties';
 import { VideoHero } from '../components/VideoHero';
 import { TestimonialCard } from '../components/TestimonialCard';
+import { PropertyGallery } from '../components/PropertyGallery';
 import { Button } from '../components/Button';
 import {
   MapPin,
@@ -286,11 +287,14 @@ Message: ${formData.message || 'N/A'}`;
               </div>
 
               <h3 className="text-2xl font-bold text-[#1a472a] mb-6">Guest Reviews</h3>
-              <div className="grid sm:grid-cols-2 gap-6">
+              <div className="grid sm:grid-cols-2 gap-6 mb-12">
                 {property.testimonials.map((testimonial, index) => (
                   <TestimonialCard key={index} testimonial={testimonial} />
                 ))}
               </div>
+
+              <h3 className="text-2xl font-bold text-[#1a472a] mb-6">Photo Gallery</h3>
+              <PropertyGallery property={property} />
             </div>
 
             <div className="lg:col-span-1">

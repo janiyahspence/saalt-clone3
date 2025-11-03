@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { VideoHero } from '../components/VideoHero';
 import { Button } from '../components/Button';
 import { TestimonialCard } from '../components/TestimonialCard';
+import { PropertyGallery } from '../components/PropertyGallery';
 import { properties } from '../data/properties';
 import {
   MapPin, Phone, Mail, Star, Bed, Users, Check, Calendar, Clock,
@@ -159,7 +160,7 @@ export const PatliputraSaaltPage: React.FC = () => {
       <section className="py-8 bg-[#f5f5f0] sticky top-20 z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-3">
-            {['overview', 'rooms', 'dining', 'events', 'location'].map((tab) => (
+            {['overview', 'rooms', 'dining', 'events', 'gallery', 'location'].map((tab) => (
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
@@ -434,6 +435,18 @@ export const PatliputraSaaltPage: React.FC = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+      )}
+
+      {activeTab === 'gallery' && (
+        <section className="py-20 bg-gradient-to-br from-[#f5f5f0] to-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-[#1a472a] mb-4 text-center">Photo Gallery</h2>
+            <p className="text-center text-[#2c3e50] mb-12 max-w-2xl mx-auto">
+              Explore our facilities, rooms, dining options, and nearby attractions through our comprehensive photo gallery
+            </p>
+            <PropertyGallery property={property} />
           </div>
         </section>
       )}
