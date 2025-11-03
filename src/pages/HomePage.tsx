@@ -749,6 +749,77 @@ export const HomePage: React.FC = () => {
         </div>
       </section>
 
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <MapPin className="mx-auto text-[#d4a574] mb-4" size={48} />
+            <h2 className="text-4xl md:text-5xl font-bold text-[#1a472a] mb-4">Our Locations</h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-[#d4a574] to-[#c89356] mx-auto mb-6"></div>
+            <p className="text-lg text-[#2c3e50] max-w-3xl mx-auto">
+              Find us across Bihar and Jharkhand. Each property is strategically located for easy access to major attractions and transportation hubs.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {properties.map((property) => (
+              <div key={property.id} className="bg-gradient-to-br from-[#f5f5f0] to-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300">
+                <div className="relative h-64">
+                  <iframe
+                    src={property.location.mapEmbedUrl}
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title={`Map of ${property.name}`}
+                    className="w-full h-full"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-2xl font-bold text-[#1a472a] mb-2">{property.shortName}</h3>
+                  <p className="text-sm text-[#d4a574] font-medium mb-4">{property.type}</p>
+
+                  <div className="space-y-3 mb-6">
+                    <div className="flex items-start gap-2">
+                      <MapPin className="text-[#d4a574] flex-shrink-0 mt-1" size={18} />
+                      <p className="text-[#2c3e50] text-sm">
+                        {property.address}, {property.city}, {property.state} {property.pincode}
+                      </p>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Phone className="text-[#d4a574] flex-shrink-0" size={18} />
+                      <a href={`tel:${property.phone}`} className="text-[#2c3e50] text-sm hover:text-[#1a472a] transition-colors">
+                        {property.phone}
+                      </a>
+                    </div>
+                  </div>
+
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    <Button
+                      variant="primary"
+                      size="sm"
+                      onClick={() => {
+                        const url = `https://www.google.com/maps/dir/?api=1&destination=${property.location.latitude},${property.location.longitude}`;
+                        window.open(url, '_blank');
+                      }}
+                      className="flex-1"
+                    >
+                      Get Directions
+                    </Button>
+                    <Link to={`/properties/${property.id}`} className="flex-1">
+                      <Button variant="outline" size="sm" className="w-full">
+                        View Property
+                      </Button>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 bg-gradient-to-br from-[#f5f5f0] to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gradient-to-r from-[#1a472a] to-[#2d6e4b] rounded-3xl p-12 md:p-16 text-center text-white shadow-2xl">

@@ -4,6 +4,7 @@ import { properties } from '../data/properties';
 import { VideoHero } from '../components/VideoHero';
 import { TestimonialCard } from '../components/TestimonialCard';
 import { PropertyGallery } from '../components/PropertyGallery';
+import { LocationWidget } from '../components/LocationWidget';
 import { Button } from '../components/Button';
 import {
   MapPin,
@@ -263,6 +264,11 @@ Message: ${formData.message || 'N/A'}`;
                   </div>
                 </>
               )}
+
+              <h3 className="text-2xl font-bold text-[#1a472a] mb-6">Location & How to Reach</h3>
+              <div className="mb-12">
+                <LocationWidget property={property} showStreetView={true} />
+              </div>
 
               <h3 className="text-2xl font-bold text-[#1a472a] mb-6">Nearby Attractions</h3>
               <div className="grid sm:grid-cols-2 gap-6 mb-12">

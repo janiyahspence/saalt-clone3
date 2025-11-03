@@ -26,6 +26,7 @@ export interface Property {
   dining: DiningOption[];
   nearbyAttractions: Attraction[];
   testimonials: Testimonial[];
+  location: LocationInfo;
 }
 
 export interface RoomType {
@@ -66,6 +67,13 @@ export interface Testimonial {
   rating: number;
   comment: string;
   date: string;
+}
+
+export interface LocationInfo {
+  latitude: number;
+  longitude: number;
+  mapEmbedUrl: string;
+  streetViewEmbedUrl?: string;
 }
 
 export const properties: Property[] = [
@@ -206,6 +214,12 @@ export const properties: Property[] = [
         date: '2025-01-28',
       },
     ],
+    location: {
+      latitude: 25.6093,
+      longitude: 85.1376,
+      mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3598.0956!2d85.1376!3d25.6093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDM2JzMzLjUiTiA4NcKwMDgnMTUuNCJF!5e0!3m2!1sen!2sin!4v1234567890',
+      streetViewEmbedUrl: 'https://www.google.com/maps/embed?pb=!4v1234567890!6m8!1m7!1s0x0!2m2!1d25.6093!2d85.1376!3f0!4f0!5f0.7820865974627469',
+    },
   },
   {
     id: 'buddha-saalt',
@@ -344,6 +358,12 @@ export const properties: Property[] = [
         date: '2024-09-25',
       },
     ],
+    location: {
+      latitude: 24.6958,
+      longitude: 84.9870,
+      mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3619.8774!2d84.9870!3d24.6958!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjTCsDQxJzQ0LjkiTiA4NMKwNTknMTMuMiJF!5e0!3m2!1sen!2sin!4v1234567890',
+      streetViewEmbedUrl: 'https://www.google.com/maps/embed?pb=!4v1234567890!6m8!1m7!1s0x0!2m2!1d24.6958!2d84.9870!3f0!4f0!5f0.7820865974627469',
+    },
   },
   {
     id: 'deoghar-saalt',
@@ -485,6 +505,12 @@ export const properties: Property[] = [
         date: '2023-07-28',
       },
     ],
+    location: {
+      latitude: 24.4853,
+      longitude: 86.6919,
+      mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3630.8436!2d86.6919!3d24.4853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjTCsDI5JzA3LjEiTiA4NsKwNDEnMzAuOCJF!5e0!3m2!1sen!2sin!4v1234567890',
+      streetViewEmbedUrl: 'https://www.google.com/maps/embed?pb=!4v1234567890!6m8!1m7!1s0x0!2m2!1d24.4853!2d86.6919!3f0!4f0!5f0.7820865974627469',
+    },
   },
   {
     id: 'narayana-greens',
@@ -641,5 +667,11 @@ export const properties: Property[] = [
         date: '2021-08-15',
       },
     ],
+    location: {
+      latitude: 24.7206,
+      longitude: 85.0055,
+      mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3617.4229!2d85.0055!3d24.7206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjTCsDQzJzE0LjIiTiA4NcKwMDAnMTkuOCJF!5e0!3m2!1sen!2sin!4v1234567890',
+      streetViewEmbedUrl: 'https://www.google.com/maps/embed?pb=!4v1234567890!6m8!1m7!1s0x0!2m2!1d24.7206!2d85.0055!3f0!4f0!5f0.7820865974627469',
+    },
   },
 ];
