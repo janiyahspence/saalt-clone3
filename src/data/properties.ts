@@ -606,19 +606,19 @@ export const properties: Property[] = [
         name: 'Tergar Monastery',
         distance: '8.9 km',
         description: 'Beautiful Tibetan Buddhist monastery offering meditation courses and spiritual teachings.',
-        image: 'https://images.unsplash.com/photo-1545652985-5edd365b12eb?w=600',
+        image: '/Tergar Monastery.webp',
       },
       {
         name: 'Great Buddha Statue',
         distance: '10 km',
         description: 'Magnificent 80-foot Buddha statue, a symbol of peace inaugurated by the Dalai Lama.',
-        image: 'https://images.unsplash.com/photo-1605481509950-c3c1eebd9db2?w=600',
+        image: '/The Great Buddha Statue.webp',
       },
       {
         name: 'Indosan Nipponji Temple',
         distance: '9 km',
         description: 'Japanese temple featuring beautiful architecture and serene gardens for meditation.',
-        image: 'https://images.unsplash.com/photo-1582552938357-32b906d3c1ab?w=600',
+        image: '/The Great Buddha Statue.jpg',
       },
     ],
     testimonials: [
