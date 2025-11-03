@@ -21,6 +21,7 @@ export interface Property {
   checkOut: string;
   heroImage: string;
   images: string[];
+  mapEmbedUrl: string;
   rooms: RoomType[];
   amenities: Amenity[];
   dining: DiningOption[];
@@ -101,6 +102,7 @@ export const properties: Property[] = [
     images: [
       '/saalt-patliputra-properties.jpg',
     ],
+    mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3598.2686844!2d85.1437!3d25.5941!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDM1JzM4LjgiTiA4NcKwMDgnMzcuMyJF!5e0!3m2!1sen!2sin!4v1234567890',
     rooms: [
       {
         name: 'Standard Room',
@@ -241,6 +243,7 @@ export const properties: Property[] = [
       '/saalt-buddha-properties.jpg',
       'https://images.unsplash.com/photo-1540541338287-41700207dee6?w=1200',
     ],
+    mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3600.0!2d84.9918!3d24.6952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjTCsDQxJzQyLjciTiA4NMKwNTknMzAuNSJF!5e0!3m2!1sen!2sin!4v1234567890',
     rooms: [
       {
         name: 'Standard Room',
@@ -379,6 +382,7 @@ export const properties: Property[] = [
       'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=1200',
       'https://images.unsplash.com/photo-1596436889106-be35e843f974?w=1200',
     ],
+    mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.8!2d86.6886!3d24.4827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjTCsDI4JzU3LjciTiA4NsKwNDEnMTkuMCJF!5e0!3m2!1sen!2sin!4v1234567890',
     rooms: [
       {
         name: 'Standard Room',
@@ -521,6 +525,7 @@ export const properties: Property[] = [
       'https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200',
       'https://images.unsplash.com/photo-1519167758481-83f29da8c459?w=1200',
     ],
+    mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3599.5!2d84.9900!3d24.7000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjTCsDQyJzAwLjAiTiA4NMKwNTknMjQuMCJF!5e0!3m2!1sen!2sin!4v1234567890',
     rooms: [
       {
         name: 'Executive Single Room AC',

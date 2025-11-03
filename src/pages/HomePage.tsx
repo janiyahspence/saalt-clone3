@@ -749,6 +749,64 @@ export const HomePage: React.FC = () => {
         </div>
       </section>
 
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <MapPin className="mx-auto text-[#d4a574] mb-4" size={48} />
+            <h2 className="text-4xl md:text-5xl font-bold text-[#1a472a] mb-4">Our Locations</h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-[#d4a574] to-[#c89356] mx-auto mb-6"></div>
+            <p className="text-lg text-[#2c3e50] max-w-3xl mx-auto">
+              Conveniently located across Bihar and Jharkhand for easy access to business districts, pilgrimage sites, and major transportation hubs
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {properties.map((property) => (
+              <div key={property.id} className="bg-gradient-to-br from-[#f5f5f0] to-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all">
+                <div className="aspect-video w-full">
+                  <iframe
+                    src={property.mapEmbedUrl}
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title={`Map of ${property.name}`}
+                  ></iframe>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-[#1a472a] mb-2">{property.name}</h3>
+                  <div className="flex items-start gap-3 mb-4">
+                    <MapPin className="text-[#d4a574] flex-shrink-0 mt-1" size={18} />
+                    <div className="text-[#2c3e50] text-sm">
+                      <p>{property.address}</p>
+                      <p>{property.city}, {property.state} {property.pincode}</p>
+                    </div>
+                  </div>
+                  <div className="flex gap-3">
+                    <a
+                      href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(property.address + ', ' + property.city + ', ' + property.state)}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#1a472a] to-[#2d6e4b] text-white rounded-lg hover:shadow-lg transition-all duration-300 text-sm font-medium"
+                    >
+                      <Navigation size={16} />
+                      Get Directions
+                    </a>
+                    <Link to={`/properties/${property.id}`}>
+                      <Button variant="secondary" size="sm">
+                        View Property
+                      </Button>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 bg-gradient-to-br from-[#f5f5f0] to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gradient-to-r from-[#1a472a] to-[#2d6e4b] rounded-3xl p-12 md:p-16 text-center text-white shadow-2xl">
