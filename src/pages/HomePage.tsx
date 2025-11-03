@@ -24,6 +24,8 @@ import {
   TrendingUp,
   CheckCircle,
   Mail,
+  Image,
+  ArrowRight,
 } from 'lucide-react';
 
 export const HomePage: React.FC = () => {
@@ -34,6 +36,17 @@ export const HomePage: React.FC = () => {
     '/budha-saalt-bodhgaya_1.png',
     '/saalt-narayna-green.jpg',
     '/saalt-deoghar.png',
+  ];
+
+  const featuredGalleryImages = [
+    { url: '/saalt-patliputra-properties.jpg', property: 'Patliputra Saalt', category: 'Property' },
+    { url: '/buddha-saalt-roomtype_deluxe.jpg', property: 'Buddha Saalt', category: 'Rooms' },
+    { url: '/narayana-greens-restaurnt.jpg', property: 'Narayana Greens', category: 'Dining' },
+    { url: '/saalt-deoghar-premium-room.jpg', property: 'Saalt Deoghar', category: 'Rooms' },
+    { url: '/narayana-weddin1.JPG', property: 'Narayana Greens', category: 'Events' },
+    { url: '/budhar-saalt-bodhgaya-restaurent.jpg', property: 'Buddha Saalt', category: 'Dining' },
+    { url: '/saalt-patliputra-deluxe-room.jpg', property: 'Patliputra Saalt', category: 'Rooms' },
+    { url: '/narayana-greens-proeperties.avif', property: 'Narayana Greens', category: 'Property' },
   ];
 
   const stats = [
@@ -689,6 +702,49 @@ export const HomePage: React.FC = () => {
               <h4 className="text-xl font-bold text-[#1a472a] mb-2">Satisfaction</h4>
               <p className="text-[#2c3e50]">On event and wedding services</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <Image className="mx-auto text-[#d4a574] mb-4" size={48} />
+            <h2 className="text-4xl md:text-5xl font-bold text-[#1a472a] mb-4">Visual Gallery</h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-[#d4a574] to-[#c89356] mx-auto mb-6"></div>
+            <p className="text-lg text-[#2c3e50] max-w-3xl mx-auto">
+              Experience the beauty and elegance of our properties through stunning visuals. From luxurious rooms to
+              exquisite dining experiences and breathtaking venues.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            {featuredGalleryImages.map((image, index) => (
+              <div
+                key={index}
+                className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+              >
+                <img
+                  src={image.url}
+                  alt={image.property}
+                  className="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                    <p className="font-bold text-lg mb-1">{image.property}</p>
+                    <p className="text-sm text-white/90">{image.category}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <Link to="/gallery">
+              <Button variant="primary" size="lg" icon={ArrowRight}>
+                Explore Complete Gallery
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
