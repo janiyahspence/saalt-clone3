@@ -3,10 +3,19 @@ import { VideoHero } from '../components/VideoHero';
 import {
   Bell, Shirt, Car, Utensils, Wifi, Dumbbell,
   Sparkles, Phone, Clock, Shield, Heart, MapPin,
-  Coffee, ShoppingBag, Stethoscope, Key
+  Coffee, ShoppingBag, Stethoscope, Key, MessageCircle
 } from 'lucide-react';
 
 export const GuestServicesPage: React.FC = () => {
+  const handleServiceInquiry = (serviceName: string, serviceDetails: string) => {
+    const message = `Hello! I'd like to inquire about ${serviceName}.
+
+${serviceDetails}
+
+Please provide more information and availability.`;
+    window.open(`https://wa.me/919709633313?text=${encodeURIComponent(message)}`, '_blank');
+  };
+
   const services = [
     {
       icon: Utensils,
@@ -14,6 +23,7 @@ export const GuestServicesPage: React.FC = () => {
       description: '24/7 in-room dining with extensive menu featuring Indian, Chinese, and Continental cuisines.',
       features: ['24/7 Available', 'Express Service', 'Special Dietary Options', 'Breakfast in Bed'],
       hours: 'Available 24/7',
+      buttonText: 'Order Room Service',
     },
     {
       icon: Bell,
@@ -21,6 +31,7 @@ export const GuestServicesPage: React.FC = () => {
       description: 'Personal assistance for reservations, recommendations, and arrangements throughout your stay.',
       features: ['Travel Planning', 'Restaurant Reservations', 'Event Tickets', 'Local Recommendations'],
       hours: '24/7 Front Desk',
+      buttonText: 'Request Concierge',
     },
     {
       icon: Shirt,
@@ -28,6 +39,7 @@ export const GuestServicesPage: React.FC = () => {
       description: 'Professional laundry, dry cleaning, and pressing services with same-day and express options.',
       features: ['Same-day Service', 'Express Service (4hrs)', 'Dry Cleaning', 'Iron & Press'],
       hours: '7:00 AM - 9:00 PM',
+      buttonText: 'Book Laundry Service',
     },
     {
       icon: Car,
@@ -35,6 +47,7 @@ export const GuestServicesPage: React.FC = () => {
       description: 'Airport transfers, city tours, and car rental services with professional drivers.',
       features: ['Airport Pickup/Drop', 'City Transfers', 'Car Rentals', 'Tour Packages'],
       hours: 'Advance Booking Required',
+      buttonText: 'Book Transportation',
     },
     {
       icon: Wifi,
@@ -42,6 +55,7 @@ export const GuestServicesPage: React.FC = () => {
       description: 'Complimentary WiFi throughout the property with high-speed connectivity in all areas.',
       features: ['Free WiFi', 'High Speed', 'All Areas Coverage', 'Business Support'],
       hours: 'Available 24/7',
+      buttonText: 'Get WiFi Support',
     },
     {
       icon: Coffee,
@@ -49,6 +63,7 @@ export const GuestServicesPage: React.FC = () => {
       description: 'Multi-cuisine restaurants, coffee shops, and bar facilities with diverse menu options.',
       features: ['Multi-cuisine Restaurant', 'Coffee Shop', 'Bar (Select Properties)', 'Banquet Catering'],
       hours: '7:00 AM - 11:00 PM',
+      buttonText: 'Make Reservation',
     },
     {
       icon: Dumbbell,
@@ -56,6 +71,7 @@ export const GuestServicesPage: React.FC = () => {
       description: 'Well-equipped fitness facilities with modern equipment and swimming pool at select properties.',
       features: ['Gym Equipment', 'Swimming Pool', 'Yoga Space', 'Personal Training'],
       hours: '6:00 AM - 10:00 PM',
+      buttonText: 'Inquire About Fitness',
     },
     {
       icon: Sparkles,
@@ -63,6 +79,7 @@ export const GuestServicesPage: React.FC = () => {
       description: 'Daily housekeeping services ensuring clean, comfortable, and well-maintained rooms.',
       features: ['Daily Cleaning', 'Turndown Service', 'Extra Towels', 'Toiletries Replenishment'],
       hours: '8:00 AM - 6:00 PM',
+      buttonText: 'Request Housekeeping',
     },
     {
       icon: MapPin,
@@ -70,6 +87,7 @@ export const GuestServicesPage: React.FC = () => {
       description: 'Complete travel assistance including tour bookings, tickets, and local sightseeing arrangements.',
       features: ['Tour Packages', 'Ticket Booking', 'Local Guides', 'Sightseeing Plans'],
       hours: '9:00 AM - 7:00 PM',
+      buttonText: 'Plan Your Trip',
     },
     {
       icon: ShoppingBag,
@@ -77,6 +95,7 @@ export const GuestServicesPage: React.FC = () => {
       description: 'Help with local shopping, recommendations for markets, and arrangement of shopping tours.',
       features: ['Shopping Tours', 'Local Markets', 'Souvenir Shops', 'Delivery Services'],
       hours: 'On Request',
+      buttonText: 'Request Shopping Help',
     },
     {
       icon: Stethoscope,
@@ -84,6 +103,7 @@ export const GuestServicesPage: React.FC = () => {
       description: 'First aid facilities and doctor-on-call services for medical emergencies.',
       features: ['First Aid', 'Doctor on Call', 'Pharmacy Info', 'Hospital Tie-ups'],
       hours: 'Emergency 24/7',
+      buttonText: 'Get Medical Help',
     },
     {
       icon: Shield,
@@ -91,6 +111,7 @@ export const GuestServicesPage: React.FC = () => {
       description: '24/7 security personnel, CCTV surveillance, and fire safety systems ensuring guest safety.',
       features: ['24/7 Security', 'CCTV Monitoring', 'Fire Safety', 'Safe Deposit'],
       hours: 'Available 24/7',
+      buttonText: 'Contact Security',
     },
   ];
 
@@ -200,8 +221,8 @@ export const GuestServicesPage: React.FC = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <div key={index} className="bg-gradient-to-br from-[#f5f5f0] to-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-all">
-                <div className="flex items-start gap-4 mb-4">
+              <div key={index} className="bg-gradient-to-br from-[#f5f5f0] to-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-all flex flex-col">
+                <div className="flex items-start gap-4 mb-4 flex-1">
                   <div className="bg-gradient-to-br from-[#1a472a] to-[#2d6e4b] p-3 rounded-full flex-shrink-0">
                     <service.icon className="text-white" size={24} />
                   </div>
@@ -218,12 +239,19 @@ export const GuestServicesPage: React.FC = () => {
                         ))}
                       </ul>
                     </div>
-                    <div className="flex items-center gap-2 text-[#d4a574] text-sm font-semibold">
+                    <div className="flex items-center gap-2 text-[#d4a574] text-sm font-semibold mb-4">
                       <Clock size={14} />
                       <span>{service.hours}</span>
                     </div>
                   </div>
                 </div>
+                <button
+                  onClick={() => handleServiceInquiry(service.title, `Service Hours: ${service.hours}\nFeatures: ${service.features.join(', ')}`)}
+                  className="w-full bg-gradient-to-r from-[#25D366] to-[#20BA5A] hover:from-[#20BA5A] hover:to-[#1da851] text-white px-4 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-[1.02] flex items-center justify-center gap-2 shadow-md hover:shadow-lg"
+                >
+                  <MessageCircle size={18} />
+                  {service.buttonText}
+                </button>
               </div>
             ))}
           </div>

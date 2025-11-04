@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { VideoHero } from '../components/VideoHero';
 import { Button } from '../components/Button';
-import { Briefcase, Building2, Users, Wifi, Coffee, Presentation, Car, FileText, Clock, Shield, Utensils, Award } from 'lucide-react';
+import { Briefcase, Building2, Users, Wifi, Coffee, Presentation, Car, FileText, Clock, Shield, Utensils, Award, MessageCircle } from 'lucide-react';
 
 export const CorporateServicesPage: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -31,54 +31,71 @@ Requirements: ${formData.requirements}`;
     window.open(`https://wa.me/919709633313?text=${encodeURIComponent(message)}`, '_blank');
   };
 
+  const handleServiceInquiry = (serviceName: string, serviceDetails: string) => {
+    const message = `Hello! I'd like to inquire about ${serviceName} for corporate needs.
+
+${serviceDetails}
+
+Please provide pricing, availability, and package details.`;
+    window.open(`https://wa.me/919709633313?text=${encodeURIComponent(message)}`, '_blank');
+  };
+
   const services = [
     {
       icon: Building2,
       title: 'Business Accommodations',
       description: 'Executive rooms and suites designed for business travelers with work desks, ergonomic chairs, and high-speed internet.',
       features: ['Executive Rooms', 'Work-Ready Spaces', 'Express Check-in', '24/7 Business Center'],
+      buttonText: 'Book Accommodation',
     },
     {
       icon: Presentation,
       title: 'Conference & Meeting Facilities',
       description: 'State-of-the-art conference halls and meeting rooms equipped with modern AV technology and professional support.',
       features: ['Multiple Meeting Rooms', 'AV Equipment', 'Projectors & Screens', 'Video Conferencing'],
+      buttonText: 'Request Conference Quote',
     },
     {
       icon: Users,
       title: 'Corporate Events & Seminars',
       description: 'Comprehensive event management for corporate gatherings, training sessions, product launches, and team meetings.',
       features: ['Event Planning', 'Custom Setup', 'Registration Desks', 'Technical Support'],
+      buttonText: 'Plan Event',
     },
     {
       icon: Utensils,
       title: 'Business Catering',
       description: 'Professional catering services for corporate events with customizable menus and dietary accommodation.',
       features: ['Coffee Breaks', 'Working Lunches', 'Buffet Options', 'Custom Menus'],
+      buttonText: 'Request Catering',
     },
     {
       icon: Clock,
       title: 'Long-Term Corporate Stays',
       description: 'Special rates and amenities for extended business stays with flexible terms and personalized service.',
       features: ['Monthly Rates', 'Laundry Service', 'Housekeeping', 'Dedicated Support'],
+      buttonText: 'Get Long-term Rates',
     },
     {
       icon: Car,
       title: 'Transportation Services',
       description: 'Airport transfers, local transportation, and chauffeur services for business travelers and corporate groups.',
       features: ['Airport Pickup', 'City Transfers', 'Hourly Rentals', 'Group Transport'],
+      buttonText: 'Book Transport',
     },
     {
       icon: Shield,
       title: 'Corporate Packages',
       description: 'Customized packages for businesses with preferred rates, flexible cancellation, and dedicated account management.',
       features: ['Volume Discounts', 'Flexible Booking', 'Priority Service', 'Account Manager'],
+      buttonText: 'Inquire About Packages',
     },
     {
       icon: Award,
       title: 'Team Building Activities',
       description: 'Organized team building programs and recreational activities to enhance team bonding and morale.',
       features: ['Outdoor Activities', 'Indoor Games', 'Custom Programs', 'Professional Facilitation'],
+      buttonText: 'Plan Team Activity',
     },
   ];
 
@@ -143,13 +160,13 @@ Requirements: ${formData.requirements}`;
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <div key={index} className="bg-gradient-to-br from-[#f5f5f0] to-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all">
+              <div key={index} className="bg-gradient-to-br from-[#f5f5f0] to-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all flex flex-col">
                 <div className="bg-gradient-to-br from-[#1a472a] to-[#2d6e4b] p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
                   <service.icon className="text-white" size={28} />
                 </div>
                 <h3 className="text-2xl font-bold text-[#1a472a] mb-3">{service.title}</h3>
                 <p className="text-[#2c3e50] leading-relaxed mb-4">{service.description}</p>
-                <ul className="space-y-2">
+                <ul className="space-y-2 mb-6 flex-1">
                   {service.features.map((feature, i) => (
                     <li key={i} className="flex items-center gap-2 text-[#2c3e50]">
                       <div className="w-2 h-2 bg-[#d4a574] rounded-full"></div>
@@ -157,6 +174,13 @@ Requirements: ${formData.requirements}`;
                     </li>
                   ))}
                 </ul>
+                <button
+                  onClick={() => handleServiceInquiry(service.title, `Features: ${service.features.join(', ')}`)}
+                  className="w-full bg-gradient-to-r from-[#25D366] to-[#20BA5A] hover:from-[#20BA5A] hover:to-[#1da851] text-white px-4 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-[1.02] flex items-center justify-center gap-2 shadow-md hover:shadow-lg"
+                >
+                  <MessageCircle size={18} />
+                  {service.buttonText}
+                </button>
               </div>
             ))}
           </div>
