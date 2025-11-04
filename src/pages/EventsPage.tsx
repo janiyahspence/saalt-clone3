@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { VideoHero } from '../components/VideoHero';
 import { Button } from '../components/Button';
 import { Link } from 'react-router-dom';
+import { VideoThumbnail } from '../components/VideoThumbnail';
 import { Users, Building2, Sparkles, UtensilsCrossed, Camera, Music, MapPin, Phone, MessageCircle, Heart, Award, Briefcase, PartyPopper, ChefHat, Wine, Star } from 'lucide-react';
 
 export const EventsPage: React.FC = () => {
@@ -199,12 +200,12 @@ Additional Details: ${formData.message}`;
               </p>
             </div>
             <div className="relative">
-              <div className="aspect-[4/3] bg-gradient-to-br from-[#f5f5f0] to-[#e8e8dd] rounded-2xl shadow-2xl overflow-hidden flex items-center justify-center">
-                <div className="text-center p-8">
-                  <Building2 className="text-[#d4a574] mx-auto mb-4" size={64} />
-                  <p className="text-[#1a472a] font-semibold text-xl">Main Banquet Hall</p>
-                  <p className="text-[#2c3e50] text-sm mt-2">Image Placeholder</p>
-                </div>
+              <div className="aspect-[4/3]">
+                <VideoThumbnail
+                  videoSrc="/bihar-banquest-shadi copy.mp4"
+                  alt="Bihar Banquets Main Hall Video"
+                  className="w-full h-full"
+                />
               </div>
             </div>
           </div>
