@@ -219,11 +219,12 @@ Additional Details: ${formData.message}`;
                   <p className="text-[#1a472a] font-medium text-sm">Wedding Setup</p>
                 </div>
               </div>
-              <div className="aspect-[4/3] bg-gradient-to-br from-[#f5f5f0] to-[#e8e8dd] rounded-xl shadow-lg overflow-hidden flex items-center justify-center">
-                <div className="text-center p-4">
-                  <Heart className="text-[#d4a574] mx-auto mb-2" size={40} />
-                  <p className="text-[#1a472a] font-medium text-sm">Haldi-Mehndi</p>
-                </div>
+              <div className="aspect-[4/3]">
+                <VideoThumbnail
+                  videoSrc="/bihar-banquest-mehdi.mp4"
+                  alt="Bihar Banquets Haldi-Mehndi Ceremony"
+                  className="w-full h-full"
+                />
               </div>
               <div className="aspect-[4/3] bg-gradient-to-br from-[#f5f5f0] to-[#e8e8dd] rounded-xl shadow-lg overflow-hidden flex items-center justify-center">
                 <div className="text-center p-4">
