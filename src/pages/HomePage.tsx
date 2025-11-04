@@ -291,6 +291,92 @@ export const HomePage: React.FC = () => {
 
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
+            <div>
+              <h2 className="text-4xl md:text-5xl font-bold text-[#1a472a] mb-6">
+                Bihar Banquets by Saalt Hotels
+              </h2>
+              <div className="w-24 h-1 bg-gradient-to-r from-[#d4a574] to-[#c89356] mb-6"></div>
+              <p className="text-lg text-[#2c3e50] leading-relaxed mb-6">
+                Discover Bihar Banquets, Patna's premier destination where elegance meets excellence. As a flagship asset in our portfolio, this venue represents the pinnacle of luxury and hospitality in the region. Our beautifully designed, spacious halls offer an unmatched ambiance, providing a truly grand and charming setting for your most cherished moments.
+              </p>
+              <p className="text-lg text-[#2c3e50] leading-relaxed mb-6">
+                We specialize in crafting unforgettable experiences, from magnificent weddings, receptions, and Haldi-Mehndi ceremonies to professional corporate meetings and joyous birthday celebrations. Our state-of-the-art amenities and versatile spaces are customizable for any event.
+              </p>
+              <p className="text-lg text-[#2c3e50] leading-relaxed mb-6">
+                At Bihar Banquets, every detail is handled with care. Our promise is impeccable service and exceptional hospitality, ensuring your celebration is both seamless and memorable. This is powered by our extensive in-house culinary team, offering exquisite catering that ranges from authentic South Indian and Chaat counters to diverse non-vegetarian main courses.
+              </p>
+              <div className="bg-gradient-to-br from-[#f5f5f0] to-white rounded-2xl p-6 mb-6 border-l-4 border-[#d4a574]">
+                <div className="flex items-start gap-3 mb-3">
+                  <MapPin className="text-[#d4a574] flex-shrink-0 mt-1" size={20} />
+                  <p className="text-[#2c3e50] font-medium">
+                    Bihar Banquets, Opposite Durga Mata Mandir, Patliputra, Patna, Bihar 800001
+                  </p>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Phone className="text-[#d4a574] flex-shrink-0" size={20} />
+                  <div>
+                    <p className="text-[#2c3e50] font-medium">Call / WhatsApp:</p>
+                    <a
+                      href="tel:9031672580"
+                      className="text-[#1a472a] font-bold text-xl hover:text-[#d4a574] transition-colors"
+                    >
+                      9031672580
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button
+                  variant="primary"
+                  size="lg"
+                  onClick={() => window.open('https://wa.me/919031672580?text=Hello, I would like to inquire about Bihar Banquets', '_blank')}
+                >
+                  Book on WhatsApp
+                </Button>
+                <Link to="/events">
+                  <Button variant="secondary" size="lg">
+                    View Event Packages
+                  </Button>
+                </Link>
+              </div>
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              <div className="rounded-2xl shadow-lg bg-gradient-to-br from-[#f5f5f0] to-white p-8 flex items-center justify-center text-center border-2 border-dashed border-[#d4a574]">
+                <div>
+                  <Image className="mx-auto text-[#d4a574] mb-3" size={48} />
+                  <p className="text-[#2c3e50] font-medium">Image 1</p>
+                  <p className="text-[#2c3e50] text-sm mt-1">Coming Soon</p>
+                </div>
+              </div>
+              <div className="rounded-2xl shadow-lg bg-gradient-to-br from-[#f5f5f0] to-white p-8 flex items-center justify-center text-center border-2 border-dashed border-[#d4a574] mt-8">
+                <div>
+                  <Image className="mx-auto text-[#d4a574] mb-3" size={48} />
+                  <p className="text-[#2c3e50] font-medium">Image 2</p>
+                  <p className="text-[#2c3e50] text-sm mt-1">Coming Soon</p>
+                </div>
+              </div>
+              <div className="rounded-2xl shadow-lg bg-gradient-to-br from-[#f5f5f0] to-white p-8 flex items-center justify-center text-center border-2 border-dashed border-[#d4a574]">
+                <div>
+                  <Image className="mx-auto text-[#d4a574] mb-3" size={48} />
+                  <p className="text-[#2c3e50] font-medium">Image 3</p>
+                  <p className="text-[#2c3e50] text-sm mt-1">Coming Soon</p>
+                </div>
+              </div>
+              <div className="rounded-2xl shadow-lg bg-gradient-to-br from-[#f5f5f0] to-white p-8 flex items-center justify-center text-center border-2 border-dashed border-[#d4a574] mt-8">
+                <div>
+                  <Image className="mx-auto text-[#d4a574] mb-3" size={48} />
+                  <p className="text-[#2c3e50] font-medium">Image 4</p>
+                  <p className="text-[#2c3e50] text-sm mt-1">Coming Soon</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-gradient-to-br from-[#f5f5f0] to-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-[#1a472a] mb-4">What Our Guests Say</h2>
             <div className="w-24 h-1 bg-gradient-to-r from-[#d4a574] to-[#c89356] mx-auto mb-6"></div>
