@@ -686,13 +686,13 @@ export const HomePage: React.FC = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white rounded-2xl p-8 shadow-lg">
-              <div className="text-4xl text-[#d4a574] mb-4">4.5/5</div>
+              <div className="text-4xl text-[#d4a574] mb-4">4.9/5</div>
               <h4 className="text-xl font-bold text-[#1a472a] mb-2">Guest Rating</h4>
               <p className="text-[#2c3e50]">Based on 5,000+ verified reviews</p>
             </div>
 
             <div className="bg-white rounded-2xl p-8 shadow-lg">
-              <div className="text-4xl text-[#d4a574] mb-4">95%</div>
+              <div className="text-4xl text-[#d4a574] mb-4">98%</div>
               <h4 className="text-xl font-bold text-[#1a472a] mb-2">Repeat Guests</h4>
               <p className="text-[#2c3e50]">Guests who book with us again</p>
             </div>
