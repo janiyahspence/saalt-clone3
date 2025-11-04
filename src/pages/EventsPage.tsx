@@ -245,11 +245,12 @@ Additional Details: ${formData.message}`;
                   <p className="text-[#1a472a] font-medium text-sm">Reception Area</p>
                 </div>
               </div>
-              <div className="aspect-[4/3] bg-gradient-to-br from-[#f5f5f0] to-[#e8e8dd] rounded-xl shadow-lg overflow-hidden flex items-center justify-center">
-                <div className="text-center p-4">
-                  <Camera className="text-[#d4a574] mx-auto mb-2" size={40} />
-                  <p className="text-[#1a472a] font-medium text-sm">Exterior View</p>
-                </div>
+              <div className="aspect-[4/3]">
+                <VideoThumbnail
+                  videoSrc="/bb-setup.mp4"
+                  alt="Bihar Banquets Exterior and Setup View"
+                  className="w-full h-full"
+                />
               </div>
             </div>
           </div>
