@@ -167,7 +167,7 @@ export const Header: React.FC = () => {
           <nav className="lg:hidden mt-4 pb-4 border-t border-gray-200 pt-4 animate-slide-up">
             {navLinks.map((link) => (
               <div key={link.path}>
-                {link.hasDropdown ? (
+                {link.hasDropdown && link.type === 'properties' ? (
                   <>
                     <Link
                       to={link.path}
@@ -183,6 +183,26 @@ export const Header: React.FC = () => {
                           className="block py-2 text-sm text-[#2c3e50] hover:text-[#1a472a] transition-colors"
                         >
                           {property.shortName}
+                        </Link>
+                      ))}
+                    </div>
+                  </>
+                ) : link.hasDropdown && link.type === 'services' ? (
+                  <>
+                    <Link
+                      to={link.path}
+                      className="block py-3 text-[#2c3e50] hover:text-[#1a472a] font-medium transition-colors"
+                    >
+                      Services
+                    </Link>
+                    <div className="pl-4 space-y-2">
+                      {servicesMenu.map((service) => (
+                        <Link
+                          key={service.path}
+                          to={service.path}
+                          className="block py-2 text-sm text-[#2c3e50] hover:text-[#1a472a] transition-colors"
+                        >
+                          {service.name}
                         </Link>
                       ))}
                     </div>
