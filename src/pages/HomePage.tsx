@@ -355,13 +355,11 @@ export const HomePage: React.FC = () => {
                   className="h-full"
                 />
               </div>
-              <div className="rounded-2xl shadow-lg bg-gradient-to-br from-[#f5f5f0] to-white p-8 flex items-center justify-center text-center border-2 border-dashed border-[#d4a574]">
-                <div>
-                  <Image className="mx-auto text-[#d4a574] mb-3" size={48} />
-                  <p className="text-[#2c3e50] font-medium">Image 3</p>
-                  <p className="text-[#2c3e50] text-sm mt-1">Coming Soon</p>
-                </div>
-              </div>
+              <VideoThumbnail
+                videoSrc="/bihar-banquest-reception.mp4"
+                alt="Bihar Banquets Reception"
+                className="h-full"
+              />
               <div className="rounded-2xl shadow-lg bg-gradient-to-br from-[#f5f5f0] to-white p-8 flex items-center justify-center text-center border-2 border-dashed border-[#d4a574] mt-8">
                 <div>
                   <Image className="mx-auto text-[#d4a574] mb-3" size={48} />

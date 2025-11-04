@@ -213,11 +213,12 @@ Additional Details: ${formData.message}`;
           <div className="mb-16">
             <h3 className="text-3xl font-bold text-[#1a472a] text-center mb-12">Event Gallery</h3>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-              <div className="aspect-[4/3] bg-gradient-to-br from-[#f5f5f0] to-[#e8e8dd] rounded-xl shadow-lg overflow-hidden flex items-center justify-center">
-                <div className="text-center p-4">
-                  <Sparkles className="text-[#d4a574] mx-auto mb-2" size={40} />
-                  <p className="text-[#1a472a] font-medium text-sm">Wedding Setup</p>
-                </div>
+              <div className="aspect-[4/3]">
+                <VideoThumbnail
+                  videoSrc="/bihar-banquest-reception.mp4"
+                  alt="Bihar Banquets Wedding Reception"
+                  className="w-full h-full"
+                />
               </div>
               <div className="aspect-[4/3]">
                 <VideoThumbnail
