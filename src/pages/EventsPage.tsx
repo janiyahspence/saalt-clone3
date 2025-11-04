@@ -156,11 +156,13 @@ Additional Details: ${formData.message}`;
                 alt="Wedding setup"
                 className="rounded-2xl shadow-xl"
               />
-              <img
-                src="/narayana-wedding2.jpg"
-                alt="Banquet hall"
-                className="rounded-2xl shadow-xl mt-8"
-              />
+              <div className="rounded-2xl shadow-xl mt-8 overflow-hidden">
+                <VideoThumbnail
+                  videoSrc="/ng-promo1.mp4"
+                  alt="Narayana Greens Wedding Venue Video"
+                  className="h-full"
+                />
+              </div>
               <img
                 src="/narayana-wedding4.jpg"
                 alt="Pool area"

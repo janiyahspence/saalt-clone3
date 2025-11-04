@@ -270,11 +270,13 @@ export const HomePage: React.FC = () => {
                 alt="Wedding venue"
                 className="rounded-2xl shadow-lg"
               />
-              <img
-                src="/narayana-wedding2.jpg"
-                alt="Banquet hall"
-                className="rounded-2xl shadow-lg mt-8"
-              />
+              <div className="rounded-2xl shadow-lg mt-8 overflow-hidden">
+                <VideoThumbnail
+                  videoSrc="/ng-promo1.mp4"
+                  alt="Narayana Greens Wedding Venue Video"
+                  className="h-full"
+                />
+              </div>
               <img
                 src="/narayana-wedding3.jpg"
                 alt="Garden venue"
