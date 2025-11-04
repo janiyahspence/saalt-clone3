@@ -4,6 +4,8 @@ import { ImageCarouselHero } from '../components/ImageCarouselHero';
 import { PropertyCard } from '../components/PropertyCard';
 import { TestimonialCard } from '../components/TestimonialCard';
 import { Button } from '../components/Button';
+import { FacebookFeedWidget } from '../components/FacebookFeedWidget';
+import { InstagramFeedWidget } from '../components/InstagramFeedWidget';
 import { properties } from '../data/properties';
 import { packages } from '../data/offers';
 import {
@@ -26,6 +28,7 @@ import {
   Mail,
   Image,
   ArrowRight,
+  Share2,
 } from 'lucide-react';
 
 export const HomePage: React.FC = () => {
@@ -821,6 +824,84 @@ export const HomePage: React.FC = () => {
       </section>
 
       <section className="py-20 bg-gradient-to-br from-[#f5f5f0] to-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <Share2 className="mx-auto text-[#d4a574] mb-4" size={48} />
+            <h2 className="text-4xl md:text-5xl font-bold text-[#1a472a] mb-4">Connect With Us</h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-[#d4a574] to-[#c89356] mx-auto mb-6"></div>
+            <p className="text-lg text-[#2c3e50] max-w-3xl mx-auto">
+              Follow us on social media to stay updated with our latest property photos, guest experiences, special offers, and exciting events. Join our growing community of travelers and hospitality enthusiasts.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-8">
+            <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300">
+              <div className="p-6 bg-gradient-to-r from-[#1a472a] to-[#2d6e4b]">
+                <h3 className="text-2xl font-bold text-white flex items-center gap-3">
+                  <div className="bg-white/20 p-2 rounded-full">
+                    <Mail size={24} />
+                  </div>
+                  Facebook Updates
+                </h3>
+                <p className="text-white/90 mt-2">Stay connected with our latest news and announcements</p>
+              </div>
+              <div className="p-4">
+                <FacebookFeedWidget
+                  pageUrl="https://www.facebook.com/saalthotels/"
+                  width={500}
+                  height={600}
+                />
+              </div>
+            </div>
+
+            <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300">
+              <div className="p-6 bg-gradient-to-r from-[#1a472a] to-[#2d6e4b]">
+                <h3 className="text-2xl font-bold text-white flex items-center gap-3">
+                  <div className="bg-white/20 p-2 rounded-full">
+                    <Image size={24} />
+                  </div>
+                  Instagram Gallery
+                </h3>
+                <p className="text-white/90 mt-2">Explore stunning visuals from our properties</p>
+              </div>
+              <div className="p-4">
+                <InstagramFeedWidget
+                  username="saalt.hotels"
+                  profileUrl="https://www.instagram.com/saalt.hotels/"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <p className="text-[#2c3e50] mb-6 text-lg">
+              Be part of our story and share your experiences with #SaaltHotels
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="https://www.facebook.com/saalthotels/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button variant="primary" size="lg">
+                  Follow on Facebook
+                </Button>
+              </a>
+              <a
+                href="https://www.instagram.com/saalt.hotels/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button variant="secondary" size="lg">
+                  Follow on Instagram
+                </Button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gradient-to-r from-[#1a472a] to-[#2d6e4b] rounded-3xl p-12 md:p-16 text-center text-white shadow-2xl">
             <Phone className="mx-auto mb-6 text-[#d4a574]" size={48} />

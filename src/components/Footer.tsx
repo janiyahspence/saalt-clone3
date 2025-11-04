@@ -15,7 +15,7 @@ export const Footer: React.FC = () => {
             </p>
             <div className="flex gap-4">
               <a
-                href="https://www.facebook.com/SAALT-Hotels"
+                href="https://www.facebook.com/saalthotels/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-white/10 p-2 rounded-full hover:bg-white/20 transition-colors"
@@ -24,7 +24,7 @@ export const Footer: React.FC = () => {
                 <Facebook size={20} />
               </a>
               <a
-                href="https://www.instagram.com/saalt.hotels"
+                href="https://www.instagram.com/saalt.hotels/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-white/10 p-2 rounded-full hover:bg-white/20 transition-colors"
